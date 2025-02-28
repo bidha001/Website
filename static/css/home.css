@@ -1,72 +1,127 @@
-*{
+/* Reset default margins, padding, and set box-sizing for all elements */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/*background*/
+/* Body styling: background image, color, and full viewport height */
+body {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%), url("/src/main/resources/static/images/Wallpaper 4k.jpeg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Additional container with similar background styling */
 .main {
     position: relative;
     width: 100%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%), url("/src/main/resources/static/images/demoIMG.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%), url("/src/main/resources/static/images/Wallpaper 4k.jpeg");
     background-position: center;
     background-size: cover;
     height: 109vh;
 }
 
-
-/*Navbar for Learniverse Connect*/
-.navbar{
-    width: 1200px;/*if I change the px, it will change the position of search bar as well*/
-    height: 75px;
-    margin-top: 10px;
-}
-
-.icon{
-    width:200px; /*Length of logo*/
-    float: left;/*position for logo*/
-    /*height: 70px;*/ /*WE WILL CHECK THIS HEIGHT LATER*/
-}
-
-.logo{
-    color: white;
-    font-size: 35px;
-    font-family: SansSerif, serif;
-    padding-left: 10px;
-    float: left;
-    padding-top: 5px;
-}
-
-.search{
-    /*container expand naturally*/
-    margin-left:500px; /*Alignment for Search bar*/
+/* Navbar container styling */
+.navbar {
     display: flex;
     align-items: center;
+    position: relative;
+    padding: 1rem 3rem;
+    background-color:transparent;
+    justify-content: space-between;
+
+}
+
+/* Logo styling */
+.logo {
+    padding-left: 5px;
+    padding-bottom: 30px;/*margin between top of the page*/
+    color: white;
+    font-size: 25px;
+    font-family: SansSerif, serif;
+}
+
+/* Navigation links container */
+.nav-links {
+    margin-top: 4.5rem;
+    display: flex;
+    list-style: none;
+    gap: 10rem;
+}
+
+/* Individual navigation link styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Navigation link hover effect */
+.nav-links a:hover {
+    color: orange;
+}
+
+/* Search area container styling */
+.search {
+    margin-bottom: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     gap: 10px;
-
 }
 
-/*Everything for the search bar*/
-.srch{
-    width: 350px;/*width of the search bar*/
-    height: 30px;/*height of the search bar*/
-    font-size: 16px;/*size of the word inside search bar*/
-    padding: 10px;/*space form the left side for "Search for Anything"*/
-    margin-top: 10px;
+/* Search input field styling */
+.search input {
+    width: 400px;
+    padding: 4px 15px;
     border-radius: 10px;
-}
-
-/*Everything for the search button*/
-.btn{
-    height: 30px;
     font-size: 16px;
-    padding: 0 20px;/*space form the left side for "Search for Anything"*/
-    margin-top: 10px;
-    border-radius: 10px;
+
 }
 
-/* Form container for login + signup */
+/* Search button styling */
+.btn {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: auto;
+}
+
+/* Authentication buttons container */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Login and Sign Up button styling */
+.login-btn,
+.signup-btn {
+    margin-bottom: 52px;/*margin between top of the page*/
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #708bb4;
+    color: white;
+}
+
+/* Authentication buttons hover effect */
+.login-btn:hover,
+.signup-btn:hover {
+    background-color: orange;
+}
+
+/* Form container for login/signup (if used) */
 .form {
-    margin-left:1250px;
+    margin-left: 1250px;
     margin-top: 10px;
     padding-right: 10px;
     display: flex;
@@ -78,8 +133,13 @@
     right: 0;
 }
 
-/*For the introduction, Web design & development course (basically for the whole paragraph)*/
-.content{
+/* Form container hover effect */
+.form:hover {
+    background: orange;
+}
+
+/* Content container for course introduction */
+.content {
     width: 1500px;
     height: auto;
     margin: auto;
@@ -87,26 +147,26 @@
     position: relative;
 }
 
-/*For the intro description*/
+/* Paragraph styling inside the content container */
 .content .par {
-    padding-left: 30px;/*Space from the left corner*/
-    padding-bottom: 30px;/*for the Join us button*/
+    padding-left: 70px;  /* Space from left edge */
+    padding-bottom: 30px;  /* Space below paragraph for button */
     font-family: Arial, serif;
     letter-spacing: 1.5px;
-    line-height: 35px; /*line spacing*/
+    line-height: 35px;
 }
 
-/*For the topic. "Web design & development course*/
-.content h1{
+/* Heading styling inside the content container */
+.content h1 {
     font-family: "Times New Roman", serif;
-    font-size: 40px;/*Size of the words*/
-    padding-left: 30px;/*space from the left side*/
-    margin-top: 10%;/*space from the top of the page*/
-    letter-spacing:2px;/*space between two lettes*/
+    font-size: 40px;  /* Font size for heading */
+    padding-left: 30px;  /* Left margin for heading */
+    margin-top: 10%;  /* Top margin for spacing */
+    letter-spacing: 2px;  /* Spacing between letters */
 }
 
-/*For the Join us button*/
-.content .cn{
+/* Join Us button styling inside the content container */
+.content .cn {
     width: 160px;
     height: 40px;
     background: #708bb4;
@@ -118,45 +178,122 @@
     cursor: pointer;
 }
 
-.cn:hover{
+/* Hover effect for Join Us button */
+.cn:hover {
     background: orange;
 }
 
-/*Promo Banner*/
+/* Promo banner styling */
 .right-column {
     position: absolute;
-    top: 60%;          /* halfway down the .main container */
-    right: 10px;       /* 30px from the right edge (adjust as you like) */
-    transform: translateY(-50%); /* shift upward by 50% of its own height for perfect centering */
-    width: 350px;      /* adjust to your liking */
-    background-color: transparent; /* dark translucent background */
+    top: 60%;  /* Position at 60% height */
+    right: 10px;  /* 10px from right edge */
+    transform: translateY(-50%);  /* Vertical centering */
+    width: 350px;  /* Fixed width */
+    background-color: transparent;
     color: white;
     padding: 50px;
     border-radius: 8px;
-    text-align: center; /* center the text within the box */
+    text-align: center;  /* Centered text */
 }
 
+/* Container styling for sections like sign up form */
+.container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
 
+/* Sign up form container styling */
+.signup-form {
+    max-width: 300px;
+    margin-right: 50px;
+}
 
+/* General styling for input fields and buttons */
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
+/* Default button styling */
+button {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+}
 
+/* Image container styling for images */
+.image-container img {
+    width: 250px;
+    border-radius: 10px;
+}
 
+/* Responsive design adjustments for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .signup-form {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .image-container img {
+        width: 100px;
+    }
+}
 
+/* Hero section styling */
+.hero {
+    padding: 4rem 2rem;
+    max-width: 2500px;
+    margin: 0 auto;
+}
 
+/* Hero content heading styling */
+.hero-content h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 35px;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
 
+/* Hero content paragraph styling */
+.hero-content .par {
+    font-family: Arial, serif;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    margin-bottom: 2rem;
+}
 
+/* Styling for the Join Us button in the hero section */
+.cn {
+    width: 160px;
+    height: 40px;
+    background: #708bb4;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
 
+/* Link styling inside the Join Us button */
+.cn a {
+    color: white;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Hover effect for the Join Us button */
+.cn:hover {
+    background: orange;
+}
