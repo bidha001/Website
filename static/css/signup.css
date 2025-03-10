@@ -28,39 +28,39 @@ body {
     line-height: 1.2;
 }
 
-/* Center the login form vertically and horizontally */
-.login-container {
+/* Center the sign up form vertically and horizontally */
+.signup-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
 }
 
-/* Login box styling */
-.login-box {
-    background: rgba(0, 0, 0, 0.8);
+/* Sign up box styling */
+.signup-box {
+    background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 10px;
-    width: 280px;
+    width: 325px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Login box title styling */
-.login-box h2 {
+/* Sign up box title styling */
+.signup-box h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: #fff;
 }
 
 /* Label styling */
-.login-box label {
+.signup-box label {
     display: block;
     margin-bottom: 0.5rem;
     color: #fff;
 }
 
 /* Input field styling */
-.login-box input {
+.signup-box input {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -68,8 +68,8 @@ body {
     border: none;
 }
 
-/* Login button styling */
-.login-submit {
+/* Sign up button styling */
+.signup-submit {
     width: 100%;
     padding: 0.5rem;
     border: none;
@@ -80,20 +80,20 @@ body {
     cursor: pointer;
 }
 
-/* Hover effect for the login button */
-.login-submit:hover {
+/* Hover effect for the sign up button */
+.signup-submit:hover {
     background-color: orange;
 }
 
-/* Signup link styling */
-.signup-link {
+/* Login link styling below the form */
+.login-link {
     margin-top: 1rem;
     text-align: center;
     color: #fff;
     font-size: 0.9rem;
 }
 
-.signup-link a {
+.login-link a {
     color: orange;
     text-decoration: none;
 }

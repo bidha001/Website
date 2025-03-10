@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign up to learniverse</title>
+    <title>Sign Up - Learniverse Connect</title>
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
-<center>
-    <h1>Sign up to Learniverse</h1>
-    <form>
-        <p><input type="text" placeholder="First Name" required></p>
-        <p><input type="text" placeholder="Last Name" required></p>
-        <p><input type="email" placeholder="Email..." required></p>
-        <p><input type="password" placeholder="Password..." required></p>
-    </form>
-</center>
+<!-- Navigation Bar with only Logo -->
+<nav class="navbar">
+    <h2 class="logo">LEARNIVERSE<br>CONNECT</h2>
+</nav>
+
+<!-- Sign Up Form Container -->
+<div class="signup-container">
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="signup-submit">Sign Up</button>
+        </form>
+        <p class="login-link">Already have an account?<br>
+            <a href="./login.html">Login here!</a>
+        </p>
+    </div>
+</div>
 </body>
 </html>
