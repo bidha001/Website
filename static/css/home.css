@@ -5,13 +5,29 @@
     box-sizing: border-box;
 }
 
+/* Ensure full height for html and body */
+html, body {
+    height: 100%;
+}
+
+/* Wrapper for flex layout to push footer to the bottom */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should expand to push the footer down */
+.main-content {
+    flex: 1;
+}
+
 /* Body styling: background image, color, and full viewport height */
 body {
     background-image: url("https://i.pinimg.com/736x/f7/52/0b/f7520b191a02451117c462faf7c87159.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
 }
 
@@ -23,8 +39,6 @@ body {
     padding: 1rem 3rem;
     background-color: #1e1f22;
     justify-content: space-between;
-
-
 }
 
 /* Logo styling */
@@ -56,7 +70,7 @@ body {
     color: white;
 }
 
-/* Login and Sign Up button styling */
+/* Login button styling */
 .login-btn {
     padding: 5px 15px;
     border-radius: 10px;
@@ -67,14 +81,14 @@ body {
     color: white;
 }
 
-/* Authentication buttons hover effect */
+/* Login button hover effect */
 .login-btn:hover {
     background-color: #604107;
 }
 
 /* Hero section styling */
 .hero {
-    position: relative; /* Create positioning context for the right-lines */
+    position: relative;
     padding: 7rem 8rem;
     max-width: 2500px;
     margin: 0 auto;
@@ -100,7 +114,7 @@ body {
     font-size: 18px;
 }
 
-/* Link styling inside Join Us button */
+/* Link styling inside the Join Us button */
 .cn a {
     color: white;
     text-decoration: none;
@@ -110,13 +124,14 @@ body {
 .cn:hover {
     background: orange;
 }
+
 /* Right-side engaging lines styling */
 .right-lines {
     position: absolute;
     top: 95%;
-    right: 9rem;/* Adjust spacing from the right edge as needed */
+    right: 9rem;
     transform: translateY(-50%);
-    width: 450px;/* Adjust width as needed */
+    width: 450px;
     color: #dadfe1;
     text-align: left;
     font-family: Arial, sans-serif;
@@ -131,7 +146,7 @@ body {
     color: #ee9d08;
 }
 
-/* Dropdown container */
+/* Dropdown container styling */
 .dropdown {
     position: relative;
 }
@@ -146,20 +161,20 @@ body {
     color: #eeb54c;
     text-decoration: none;
     font-size: 1.1rem;
-    cursor: pointer; /* Makes the label appear clickable */
+    cursor: pointer;
 }
 
-/* The hidden dropdown menu */
+/* Hidden dropdown menu */
 .dropdown-content {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    top: 2.5rem; /* Adjust vertical offset to position below the label */
-    left: 0;     /* Aligns with the left edge of the .dropdown container */
-    background-color: #1e1f22; /* Same as navbar color scheme */
+    top: 2.5rem;
+    left: 0;
+    background-color: #1e1f22;
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 999; /* Ensures the dropdown is on top */
+    z-index: 999;
 }
 
 /* Individual dropdown items */
@@ -169,7 +184,7 @@ body {
     color: #eeb54c;
     text-decoration: none;
     font-size: 1.1rem;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 /* Hover effect for dropdown items */
@@ -182,3 +197,5 @@ body {
 .dropdown input[type="checkbox"]:checked ~ .dropdown-content {
     display: block;
 }
+
+
